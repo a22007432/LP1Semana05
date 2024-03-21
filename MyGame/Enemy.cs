@@ -12,6 +12,8 @@ namespace MyGame
 
         private float shield;
 
+        static int p;
+
         //construct
         public Enemy(string name)
         {
@@ -38,6 +40,8 @@ namespace MyGame
             
         }
 
+
+
         //Overload as a failsafe 
         public string SetName()
         {
@@ -59,6 +63,26 @@ namespace MyGame
         public float GetShield()
         {
             return shield;
+        }
+
+        static int GetNumPwrUp()
+        {
+            return p;
+        }
+
+        public void PickupPowerUp(PowerUp powerUp, float f)
+        {
+            if(powerUp == PowerUp.Health)
+            {
+                health += f;
+                if(health > 100) health = 100;
+            }
+
+            if(powerUp == PowerUp.Shield)
+            {
+                shield += f;
+                if(shield > 100) shield = 100;
+            }
         }
 
         public void TakeDamage(float damage)
