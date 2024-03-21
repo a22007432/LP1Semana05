@@ -20,9 +20,18 @@ namespace MyGame
             {
                 Console.Write($"Nome do inimigo {i+1}: ");
                 string tmp_name = Console.ReadLine();
+
                 
                 Enemy rank_and_file = new Enemy(tmp_name);
+
+                if(i % 2 == 0)
+                {
+                    rank_and_file.PickupPowerUp(PowerUp.Shield, 200);
+                }
+
                 enemy_array[i]= rank_and_file;
+
+
             }
 
             foreach(Enemy e in enemy_array)
