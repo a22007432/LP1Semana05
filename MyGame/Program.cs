@@ -34,10 +34,21 @@ namespace MyGame
 
             }
 
+            Console.WriteLine("");
+
             foreach(Enemy e in enemy_array)
             {
             Console.WriteLine($"{e.GetName()} {e.GetHealth()} {e.GetShield()}");
+            Console.WriteLine(e.GetNumPwrUp());
             }
+            
+
+    
+         
+
+            
+
+            
 
         }
     }

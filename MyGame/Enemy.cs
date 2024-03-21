@@ -20,7 +20,18 @@ namespace MyGame
             this.name = SetName(name);
             health = 100;
             shield = 0;
+            p = GetNumPwrUp();
+
+            
         }
+
+        static Enemy()
+        {
+            p = 0;
+            
+        }
+
+  
 
         //checks if name is more than 8 chars and deletes the extras
         public string SetName(string nametoset)
@@ -65,8 +76,9 @@ namespace MyGame
             return shield;
         }
 
-        static int GetNumPwrUp()
+        public int GetNumPwrUp()
         {
+            
             return p;
         }
 
@@ -83,6 +95,9 @@ namespace MyGame
                 shield += f;
                 if(shield > 100) shield = 100;
             }
+
+            p++;
+            
         }
 
         public void TakeDamage(float damage)
