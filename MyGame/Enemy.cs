@@ -12,16 +12,53 @@ namespace MyGame
 
         private float shield;
 
+        //construct
         public Enemy(string name)
         {
-            this.name = name;
+            this.name = SetName(name);
             health = 100;
             shield = 0;
         }
 
+        //checks if name is more than 8 chars and deletes the extras
+        public string SetName(string nametoset)
+        {
+            if(nametoset.Length > 8)
+            {
+                name = nametoset.Remove(8);
+
+                return name;
+            }
+            else
+            {
+                name = nametoset;
+                return name;
+            }
+            
+            
+        }
+
+        //Overload as a failsafe 
+        public string SetName()
+        {
+            return name;
+            
+        }
+
+        
         public string GetName()
         {
             return name;
+        }
+
+        public float GetHealth()
+        {
+            return health;
+        }
+
+        public float GetShield()
+        {
+            return shield;
         }
 
         public void TakeDamage(float damage)
