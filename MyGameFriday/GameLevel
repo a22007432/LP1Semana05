@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace MyGameFriday
+{
+    public class GameLevel
+    {
+        public GameLevel(int NumRooms, Difficulty difficulty)
+        {
+            
+        }
+
+        public SetEnemyInRoom(int RoomIndex)
+        {
+
+        }
+    }
+}
